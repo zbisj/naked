@@ -28,6 +28,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
+  z-index: 100;
 `;
 
 export const Navigation = styled.nav`
@@ -83,6 +84,7 @@ export const SecondaryNav = styled.div`
 
       a {
         color: #000;
+        outline: none;
         font-size: 15px;
         font-family: Roboto;
         letter-spacing: 0.45px;

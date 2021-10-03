@@ -47,6 +47,8 @@ const addBackground = (background) => {
   switch (background) {
     case "primary":
       return "color: #fff; background-color: #46d281;";
+    case "tertiary":
+      return "color: #fff; background-color: #000;";
     case "secondary":
       return "color: #000; background-color: #ebebeb;";
     default:
@@ -64,6 +66,7 @@ export const ButtonContainer = styled.a`
   border-radius: 20px;
   letter-spacing: 0.6px;
   text-decoration: none;
+  font-family: Roboto, sans-serif;
   ${({ size }) => addSize(size)}
   ${({ background }) => addBackground(background)}
 `;

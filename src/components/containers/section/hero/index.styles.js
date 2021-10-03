@@ -35,6 +35,11 @@ export const HeroContainer = styled.section`
       font-size: 55px;
       line-height: 60px;
     }
+
+    /* LAPTOP */
+    @media screen and (min-width: 769px) {
+      font-weight: 900;
+    }
   }
 
   /* TABLET */
@@ -50,11 +55,18 @@ export const HeroContainer = styled.section`
 
 export const HeroContent = styled.div`
   display: flex;
+  padding: 30px 30px 0 30px;
   flex-flow: column nowrap;
   justify-content: center;
 
-  padding: 30px 30px 0 30px;
-
+  h2 {
+    color: #929292;
+    font-size: 20px;
+    line-height: 1.66;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
   /* TABLET */
   @media screen and (min-width: 768px) {
     width: 50%;
@@ -64,29 +76,27 @@ export const HeroContent = styled.div`
   @media screen and (max-width: 425px) {
     height: 80vh;
   }
-`;
 
-export const HeroTabletImage = styled.img`
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    display: block;
-    padding-top: 30px;
+  /* LAPTOP */
+  @media screen and (min-width: 769px) {
+    margin-left: 80px;
   }
 `;
 
-export const HeroMobileImage = styled.img`
-  width: 100%;
+export const HeroImage = styled.img`
+  width: 50%;
+  height: auto;
   max-width: 100%;
-
   /* TABLET */
-  @media screen and (min-width: 768px) {
-    display: none;
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
+
+  /* LAPTOP */
+  @media screen and (min-width: 769px) {
+    display: block;
   }
 `;
-
 // 1.6. END ....................................................................
 
 // END FILE ####################################################################

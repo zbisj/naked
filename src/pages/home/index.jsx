@@ -8,13 +8,16 @@ import PropTypes from "prop-types";
 // 1.1. END ....................................................................
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
-import { UnderWriteSection } from "./index.styles";
+import { MediaBelt, UnderWriteSection } from "./index.styles";
 import Header from "../../components/navigation/header";
 import HeroSection from "../../components/containers/section/hero";
+import ProductSection from "../../components/containers/section/product";
+import PricingSection from "../../components/containers/section/pricing";
 // 1.2. END ....................................................................
 
 // 1.3. IMAGES .................................................................
-import HollardImage from "../../assets/images/underwritten.svg";
+import media_belt from "../../assets/images/media-belt.png";
+import hollard_image from "../../assets/images/underwritten.svg";
 
 // 1.3. END ....................................................................
 
@@ -40,8 +43,15 @@ const Home = () => {
       <Header />
       <HeroSection />
       <UnderWriteSection>
-        <img src={HollardImage} alt="Underwritten by Hollard" />
+        <img src={hollard_image} alt="Underwritten by Hollard" />
       </UnderWriteSection>
+      <MediaBelt>
+        <div>
+          <img src={media_belt} alt="Underwritten by Hollard" />
+        </div>
+      </MediaBelt>
+      <PricingSection />
+      <ProductSection />
     </>
   );
 

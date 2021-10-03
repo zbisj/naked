@@ -35,6 +35,30 @@ export const UnderWriteSection = styled.section`
 export const BenefitsSection = styled.section`
   padding: 30px 30px 0 30px;
 `;
+
+export const MediaBelt = styled.section`
+  display: block;
+  margin-top: 80px;
+  border-top: 1px solid #ebebeb;
+
+  div {
+    max-width: 75em;
+    padding: 20px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* MOBILE */
+  @media screen and (max-width: 425px) {
+    display: none;
+  }
+`;
 // 1.6. END ....................................................................
 
 // END FILE ####################################################################

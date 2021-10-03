@@ -1,4 +1,4 @@
-// [ COMPONENTS > CONTAINERS > SECTION > HERO ] ################################
+// [ COMPONENTS > CONTAINERS > SECTION > PRICING ] #############################
 
 // 1.1. EXTERNAL DEPENDENCIES ..................................................
 
@@ -8,13 +8,23 @@ import PropTypes from "prop-types";
 // 1.1. END ....................................................................
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
-import { HeroImage, HeroContent, HeroContainer } from "./index.styles";
+import {
+  Card,
+  Cards,
+  Heading,
+  CardHeader,
+  Subheading,
+  CardContent,
+  CardControls,
+  PricingContainer,
+} from "./index.styles";
 import Button from "../../../controls/button";
 // 1.2. END ....................................................................
 
 // 1.3. IMAGES .................................................................
-
-import hero_default from "../../../../assets/images/hero-default.svg";
+import car from "../../../../assets/images/car.png";
+import home_cover from "../../../../assets/images/home-cover.png";
+import { ReactComponent as RightChevronIcon } from "../../../../assets/icon/chevron-right.svg";
 // 1.3. END ....................................................................
 
 // 1.4. DATA ...................................................................
@@ -25,7 +35,7 @@ import hero_default from "../../../../assets/images/hero-default.svg";
 
 // 1.5. COMPONENT ..............................................................
 
-const HeroSection = () => {
+const PricingSection = () => {
   // 1.5.1. HOOKS & API CALLS ..................................................
   // 1.5.1. END ................................................................
 
@@ -35,14 +45,55 @@ const HeroSection = () => {
   // 1.5.3. RENDER
 
   return (
-    <HeroContainer>
-      <HeroContent>
-        <h1>The new way to insure your stuff</h1>
-        <h2>Instant, honest insurance at game-changing prices.</h2>
-        <Button text="Get my price" size="large" background="primary" />
-      </HeroContent>
-      <HeroImage src={hero_default} alt="Hero image" />
-    </HeroContainer>
+    <PricingContainer>
+      <Heading>Game-changing prices</Heading>
+      <Subheading>
+        AI and no call centres ensure that you get comprehensive cover at the
+        lowest prices.
+      </Subheading>
+      <Cards>
+        <Card>
+          <CardHeader>
+            <h3>Car Insurance</h3>
+            <div>
+              <RightChevronIcon />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div>
+              <p>From</p>
+              <p>
+                R180<sub>pm</sub>
+              </p>
+            </div>
+            <img src={car} alt="car" />
+          </CardContent>
+          <CardControls>
+            <Button text="Find out more" size="small" background="tertiary" />
+          </CardControls>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h3>Home Insurance</h3>
+            <div>
+              <RightChevronIcon />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div>
+              <p>From</p>
+              <p>
+                R43<sub>pm</sub>
+              </p>
+            </div>
+            <img src={home_cover} alt="Furniture" />
+          </CardContent>
+          <CardControls>
+            <Button text="Find out more" size="small" background="tertiary" />
+          </CardControls>
+        </Card>
+      </Cards>
+    </PricingContainer>
   );
 
   // 1.5.3. RENDER
@@ -61,12 +112,12 @@ const HeroSection = () => {
 
 // 1.7.2. PROP TYPES
 
-HeroSection.propTypes = {};
+PricingSection.propTypes = {};
 
 // 1.7.2. END
 
 // 1.7. END ....................................................................
 
-export default HeroSection;
+export default PricingSection;
 
 // END FILE ####################################################################
